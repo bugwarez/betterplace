@@ -1,3 +1,11 @@
+# Betterplace
+<img src="https://raw.githubusercontent.com/bugwarez/betterplace/master/public/static/images/website/logo/logo.png" width="128"/>
+
+### Nothing fancy here. just a project i will never finish. feel free to help me to not finish this project. 
+
+Just like the name, better place than other social media platforms
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
