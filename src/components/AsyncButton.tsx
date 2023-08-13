@@ -15,6 +15,7 @@ interface AsyncButtonProps {
     color: "error" | "primary" | "inherit" | "secondary" | "success" | "info" | "warning"
     sx?: SxProps<Theme> | undefined;
     fullWidth?: boolean;
+    titleVariant?: any;
 
 }
 
@@ -27,9 +28,10 @@ const AsyncButton = (props: AsyncButtonProps) => {
             onClick={props.onClick}
             sx={props.sx}
             fullWidth={props.fullWidth}
+
         >
             <Stack direction={"row"} alignItems="center" justifyContent="center" gap={2}>
-                <Typography sx={{ paddingY: 1 }} variant='h6'>{props.title}</Typography>{props.state == "loading" ? <CircularProgress color='secondary' size={20} /> : null}
+                <Typography sx={{ paddingY: 1 }} variant={props.titleVariant ? props.titleVariant : "h6"}>{props.title}</Typography>{props.state == "loading" ? <CircularProgress color='secondary' size={20} /> : null}
             </Stack>
 
         </Button >

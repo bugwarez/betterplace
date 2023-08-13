@@ -12,6 +12,11 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .web-link{
   text-decoration: none;
   color: #FFAF35;

@@ -14,15 +14,23 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 //!Themes
 import { lightTheme } from "@/themes/light-theme"
-import Layout from './components/Layout';
+//!Components
+import Layout from '../components/Layout';
+import MenuDrawer from '../components/MenuDrawer';
+import { useRouter } from 'next/router';
+
+
 
 export default function App({ Component, pageProps }: AppProps) {
+
   return (
     <>
       <ThemeProvider theme={lightTheme}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <MenuDrawer>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </MenuDrawer>
         <ToastContainer position="top-right" autoClose={5000} newestOnTop closeOnClick pauseOnHover />
       </ThemeProvider>
     </>

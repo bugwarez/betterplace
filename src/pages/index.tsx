@@ -15,10 +15,10 @@ import Image from 'next/image'
 
 //!Icons
 import LockIcon from '@mui/icons-material/Lock';
-import AsyncButton from './components/AsyncButton';
+import AsyncButton from '../components/AsyncButton';
 import Link from 'next/link';
 
-function Home() {
+function Index() {
 
   const [value, setValue] = React.useState(0);
 
@@ -184,4 +184,4 @@ function a11yProps(index: number) {
 }
 
 
-export default Home
+export default Index
