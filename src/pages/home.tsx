@@ -1,6 +1,8 @@
 import CreatePostCard from '@/components/CreatePostCard'
 import FeedPost from '@/components/FeedPost'
 import Spacer from '@/components/Spacer'
+import { posts } from '@/data/Post'
+import { Post } from '@/types/Post'
 import { Box, Card, Divider, Chip, Typography } from '@mui/material'
 import React from 'react'
 
@@ -31,14 +33,12 @@ function Home() {
                         <CreatePostCard />
                         <Spacer size={15} />
                         <Divider variant='fullWidth'>
-
                             <Chip label={<Typography variant="h6">Feed</Typography>} color='primary' sx={{ width: 150, height: "2rem" }} />
-
                         </Divider>
                         {
-                            [1].map((post, index) => {
+                            posts.map((post: Post, index) => {
                                 return (
-                                    <FeedPost type='media' media={"https://source.unsplash.com/TCpfPxKPOvk/1000x600"} mediaType='photo' key={index} />
+                                    <FeedPost postDetails={post} key={post.id} />
                                 )
                             })
                         }

@@ -158,6 +158,10 @@ export default function ResponsiveDrawer(props: Props) {
 
     const container = window !== undefined ? () => window().document.body : undefined;
 
+    if (router.pathname == "/") {
+        return children
+    }
+
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
@@ -211,7 +215,7 @@ export default function ResponsiveDrawer(props: Props) {
                         display: { xs: 'none', sm: 'block' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                     }}
-                    open
+
                 >
                     {drawer}
                 </Drawer>
