@@ -149,7 +149,7 @@ function FeedPost(props: FeedPostProps) {
                                 alignItems: "start",
                                 justifyContent: "start"
                             }} gap={3}>
-                                <Avatar src='' sx={{ width: "55px", height: "55px", borderRadius: "10px" }} variant='rounded' />
+                                <Avatar src={postOwner?.avatar} sx={{ width: "55px", height: "55px", borderRadius: "10px" }} variant='rounded' />
                                 <Box sx={{ width: "100%", heigth: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "start" }}>
                                     <Box sx={{ width: "100%", heigth: "100%", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "start" }}>
                                         <Typography variant='body2' fontSize={"1.2em"} fontWeight={600}>{postOwner?.fullname}</Typography>
@@ -164,7 +164,7 @@ function FeedPost(props: FeedPostProps) {
                             <img width="32" height="32" src={`/static/images/website/more_${showMore ? "filled" : "outlined"}_48.png`} alt="send-letter" />
                         </IconButton>
                     </Box>
-                    <Box sx={{ width: "100%", heigth: "100%", display: "flex", flexDirection: "column", alignItems: "start", justifyContent: "start" }}>
+                    <Box sx={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "start", justifyContent: "start" }}>
                         <Typography variant='body2' fontSize={"1em"} fontWeight={400}>
                             {postDetails?.text}
                         </Typography>
