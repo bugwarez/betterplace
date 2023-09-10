@@ -9,5 +9,5 @@ export type Post = {
   downvotes: number;
   comments: number;
   shares: number;
-  createdAt: string;
+  timestamp: string;
 };

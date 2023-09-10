@@ -12,7 +12,7 @@ export const posts: Post[] = [
     downvotes: 1223,
     comments: 53,
     shares: 2,
-    createdAt: '2023-08-15T12:10:00',
+    timestamp: '2023-08-15T12:10:00',
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const posts: Post[] = [
     downvotes: 446,
     comments: 18,
     shares: 14,
-    createdAt: '2023-08-15T01:33:00',
+    timestamp: '2023-08-15T01:33:00',
   },
   {
     id: 1,
@@ -38,6 +38,6 @@ export const posts: Post[] = [
     downvotes: 223,
     comments: 12,
     shares: 7,
-    createdAt: '2023-08-15T00:00:00',
+    timestamp: '2023-08-15T00:00:00',
   },
 ];

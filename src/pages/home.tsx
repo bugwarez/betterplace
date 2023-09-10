@@ -2,6 +2,7 @@ import CreatePostCard from '@/components/CreatePostCard'
 import FeedPost from '@/components/FeedPost'
 import Spacer from '@/components/Spacer'
 import TrendListCard from '@/components/TrendsListCard'
+import YouMayKnow from '@/components/YouMayKnow'
 import { posts } from '@/data/Post'
 import { Post } from '@/types/Post'
 import { Box, Card, Divider, Chip, Typography, Stack, List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
@@ -46,7 +47,6 @@ function Home() {
                             })
                         }
                     </Box>
-
                     <Box sx={{
                         width: "30%",
                         height: "100%",
@@ -54,8 +54,6 @@ function Home() {
                         flexDirection: "column",
                         alignItems: "start",
                         justifyContent: "start",
-
-
                     }}>
                         <Box sx={{
                             width: "100%",
@@ -64,7 +62,6 @@ function Home() {
                             flexDirection: "column",
                             alignItems: "start",
                             justifyContent: "start",
-
                         }}>
                             <TrendListCard />
                         </Box>
@@ -99,6 +96,19 @@ function Home() {
                                 <Typography variant='caption'>Sponsored</Typography>
                                 <Typography variant='caption'>Porsche 911 GT3RS</Typography>
                             </Stack>
+                        </Box>
+                        <Spacer size={15} />
+                        <Divider variant='fullWidth' sx={{ width: "100%" }} />
+                        <Spacer size={15} />
+                        <Box sx={{
+                            width: "100%",
+                            height: "100%",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "start",
+                            justifyContent: "start",
+                        }}>
+                            <YouMayKnow />
                         </Box>
                     </Box>
                 </Box>

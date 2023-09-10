@@ -136,14 +136,16 @@ export default function TrendListCard() {
                         {users.slice(0, 6).sort((a, b) => b.id - a.id).map((user, index) => (
                             <>
                                 <ListItem key={user.id} disablePadding>
-                                    <ListItemButton component="a" href="#simple-list">
+                                    <ListItemButton disableRipple component="a" href="#simple-list">
                                         <ListItemAvatar>
                                             <Avatar sx={{
                                                 width: 50,
                                                 height: 50
                                             }} src={user.avatar} />
                                         </ListItemAvatar>
-                                        <ListItemText primary={<Stack sx={{ width: "100%" }} direction="row" alignItems="center" justifyContent={"start"}><Typography variant='body1' sx={{ padding: 0 }}>{user?.fullname}</Typography> {user?.isVerified ? <Tooltip placement='top' title="Verified Account" arrow><VerifiedIcon color='primary' fontSize='small' sx={{ marginLeft: 1 }} /></Tooltip> : null}</Stack>} secondary={<Typography variant='caption' color={"text.secondary"} sx={{ padding: 0 }}>{user?.username}</Typography>} />
+                                        <ListItemText primary={<Stack sx={{ width: "100%" }} direction="row" alignItems="center" justifyContent={"start"}><Typography variant='body1' sx={{ padding: 0 }}>{user?.fullname}</Typography> {user?.isVerified ? <Tooltip placement='top' title="Verified Account" arrow><VerifiedIcon color='primary' sx={{ marginLeft: 1, fontSize: "18px" }} /></Tooltip> : null}</Stack>} secondary={
+                                            <Typography variant='caption' color={"text.secondary"} sx={{ padding: 0 }}>{user?.username} • <Button sx={{ p: 0, borderRadius: "10px" }} size='small'>Follow</Button></Typography>
+                                        } />
                                     </ListItemButton>
                                 </ListItem>
                                 {index !== 5 && <Divider />}

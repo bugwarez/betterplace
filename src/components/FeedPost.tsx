@@ -153,9 +153,9 @@ function FeedPost(props: FeedPostProps) {
                                 <Box sx={{ width: "100%", heigth: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "start" }}>
                                     <Box sx={{ width: "100%", heigth: "100%", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "start" }}>
                                         <Typography variant='body2' fontSize={"1.2em"} fontWeight={600}>{postOwner?.fullname}</Typography>
-                                        {postOwner?.isVerified ? <Tooltip placement='top' title="Verified Account" arrow><VerifiedIcon color='primary' fontSize='small' sx={{ marginLeft: 1 }} /></Tooltip> : null}
+                                        {postOwner?.isVerified ? <Tooltip placement='top' title="Verified Account" arrow><VerifiedIcon color='primary' sx={{ marginLeft: 1, fontSize: "18px" }} /></Tooltip> : null}
                                         <Typography color={theme.palette.text.secondary} variant='body1' sx={{ ml: 1 }}>{postOwner?.username}</Typography>
-                                        <Typography color={theme.palette.text.secondary} variant='body1' sx={{ ml: 1 }}>•&nbsp;{getTimeSince(new Date(postDetails?.createdAt))}</Typography>
+                                        <Typography color={theme.palette.text.secondary} variant='body1' sx={{ ml: 1 }}>•&nbsp;{getTimeSince(new Date(postDetails?.timestamp))}</Typography>
                                     </Box>
                                 </Box>
                             </Box>
@@ -198,7 +198,7 @@ function FeedPost(props: FeedPostProps) {
                                 <IconButton onClick={handleDownvote} size='small' sx={{ padding: 0, width: "fit-content", height: "fit-content" }}>
                                     <img width="32" height="32" src={`/static/images/website/downvote_${downvoted ? "filled" : "outlined"}_48.png`} alt="send-letter" />
                                 </IconButton>
-                                <Typography variant='body1' color={"text.primary"}>&nbsp;{postDetails?.downvotes}</Typography>
+                                <Typography variant='body1' color={"text.primary"}>&nbsp;{nFormatter(postDetails?.downvotes)}</Typography>
                             </Box>
                             <Box sx={{
                                 width: "20%",
