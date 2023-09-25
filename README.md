@@ -1,3 +1,5 @@
+# 🚧🚧🚧THIS PROJECT IS MOVED TO [better-place repo]([https://nextjs.org/](https://github.com/bugwarez/better-place))🚧🚧🚧
+
 # Betterplace
 <img src="https://raw.githubusercontent.com/bugwarez/betterplace/master/public/static/images/website/logo/logo.png" width="128"/>
 
